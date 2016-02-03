@@ -1,0 +1,39 @@
+<!-- <div class="jumbotron">
+  <h1>List of iPhones</h1>
+<table class="table table-bordered" ng-repeat="mobiles in mobile">
+  <thead>
+    <tr class="imp"><th>
+<h1><center>{{mobiles.name}}</center></h1></th></tr>
+</thead>
+<tbody>
+  <tr class="info"><td>
+<p><center><b>
+  {{mobiles.company}}
+</b></center></p></td></tr>
+
+<tr><td>
+<center>  <img ng-src="{{mobiles.img}}" alt="" /> </center></td></tr>
+</tbody>
+</table>
+
+</div> -->
+
+
+
+<div class="container">
+    <h1>List of iPhones</h1>
+  <div class="row" ng-repeat="mobile2 in mobile"">
+<div class="col-md-2" ng-repeat="mobiles in mobile2">
+      <table class="table table-bordered">
+        <thead>
+          <tr><th>
+    <h5><strong><center> {{mobiles.name}}</center></strong> </h5></th></tr></thead>
+    <tbody>
+      <tr class="info"><td>
+    <h5><center>{{mobiles.company}}</center></h5></td></tr>
+    <tr class="active"><td>
+  <center>  <a href="#/getid/{{mobiles.id}}">
+  <img class="img=responsive" ng-src="{{mobiles.img}}" style="width:50%">
+</center>  </a></td></tr></tbody></table>
+</div>
+</div>

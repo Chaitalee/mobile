@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+
+
+<ul>
+  <li><a class="active" href="" ng-click="proj();">Projects</a></li>
+</ul>
+
+<body>
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Action</th>
+  </tr>
+<tr ng-repeat="projects in project">
+  <td>{{projects.id}}</td>
+  <td>{{projects.name}}</td>
+  <td><a hre="">Edit</a>
+ <button class="btn btn-warninng" ng-click="remove(item);">Remove</button>
+  </td>
+</tr>
+</table>
+</body>
+</html>
